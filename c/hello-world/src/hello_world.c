@@ -1,8 +1,8 @@
 #include "hello_world.h"
 //#include "<stdio.h>"
-
+char *hello_world;
 const char *hello(void)
 {
-  char h[14] = "Hello, World!\0";
-  return  h;
+   hello_world = "Hello, World!";
+  return  hello_world;
 }
