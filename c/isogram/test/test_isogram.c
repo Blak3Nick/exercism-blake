@@ -47,7 +47,7 @@ void test_non_letter_char(void)
 
 void test_duplicated_non_letter_char(void)
 {
-   TEST_IGNORE();
+   
    TEST_ASSERT_TRUE(is_isogram("Hjelmqvist-Gryb-Zock-Pfund-Wax"));
 }
 
