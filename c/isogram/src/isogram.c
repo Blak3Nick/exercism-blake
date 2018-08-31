@@ -19,6 +19,7 @@ bool is_isogram(const char phrase[]){
         }
         next ++;
         c = phrase[next];
+        c = tolower(c);
         found = 1;
         break;
     }

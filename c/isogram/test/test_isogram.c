@@ -14,14 +14,6 @@ void test_empty_string(void)
 {
    TEST_ASSERT_TRUE(is_isogram(""));
 }
-void test_empty_string2(void)
-{
-   TEST_ASSERT_TRUE(is_isogram("    "));
-}
-void test_empty_3(void)
-{
-   TEST_ASSERT_TRUE(is_isogram("Ab-c--"));
-}
 
 void test_lower_case_only(void)
 {              // delete this line to run test
@@ -76,8 +68,6 @@ int main(void)
    UnityBegin("test/test_isogram.c");
 
    RUN_TEST(test_empty_string);
-   RUN_TEST(test_empty_string2);
-   RUN_TEST(test_empty_3);
    RUN_TEST(test_lower_case_only);
    RUN_TEST(test_duplicated_letter);
    RUN_TEST(test_duplicated_letter_from_end_of_alphabet);
