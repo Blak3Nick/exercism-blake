@@ -2,13 +2,18 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-char* letters = NULL;
+char* letters;
 char *abbreviate(const char *phrase){
     //char * acro =NULL;
-    if(phrase == NULL)    {
+
+
+    if(phrase == NULL)  {
         return NULL;
     }
     size_t len = strlen(phrase);
+    if(len <1){
+      return NULL;
+    }
     letters = malloc(len);
   //  letters[len];
 
