@@ -101,7 +101,7 @@ void test_long_abbreviation(void)
 int main(void)
 {
    UnityBegin("test/test_acronym.c");
-
+   
    RUN_TEST(test_basic_abbreviation);
    RUN_TEST(test_null_string);
    RUN_TEST(test_lower_case_words);
