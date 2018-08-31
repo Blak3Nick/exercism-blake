@@ -5,6 +5,7 @@ bool is_isogram(const char phrase[]){
   char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
   int next =0;
   char c = phrase[next];
+  c = tolower(c);
   char b;
   int found;
   while (c != '\0'){
