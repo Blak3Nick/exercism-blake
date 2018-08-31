@@ -1,4 +1,5 @@
 #include "isogram.h"
+#include <ctype.h>
 
 bool is_isogram(const char phrase[]){
   char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
