@@ -47,19 +47,19 @@ void test_non_letter_char(void)
 
 void test_duplicated_non_letter_char(void)
 {
-   
+
    TEST_ASSERT_TRUE(is_isogram("Hjelmqvist-Gryb-Zock-Pfund-Wax"));
 }
 
 void test_multiple_whitespace(void)
 {
-   TEST_IGNORE();
+   
    TEST_ASSERT_TRUE(is_isogram("Emily Jung Schwartzkopf"));
 }
 
 void test_duplicated_letter_within_word(void)
 {
-   TEST_IGNORE();
+
    TEST_ASSERT_FALSE(is_isogram("accentor"));
 }
 
