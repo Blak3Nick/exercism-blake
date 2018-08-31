@@ -5,8 +5,6 @@
 char* letters;
 char *abbreviate(const char *phrase){
     //char * acro =NULL;
-
-
     if(phrase == NULL)  {
         return NULL;
     }
@@ -23,7 +21,7 @@ char *abbreviate(const char *phrase){
     int count = 1;
     for (size_t i =1; i<len; i++){
       c = phrase[i];
-      if(c== ' '){
+      if(c== ' ' || c == '-'){
         i++;
         c = phrase[i];
         c = toupper(c);
@@ -31,7 +29,7 @@ char *abbreviate(const char *phrase){
         count ++;
       }
     }
-    count ++;
+    //count ++;
     letters[count] = '\0';
     printf("Abrev:\t%s\n", letters);
     //acro = letters;
