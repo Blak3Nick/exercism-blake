@@ -8,34 +8,22 @@ int word_count(const char *input_text, word_count_word_t * words){
   printf("Words text are:\t%s\n", (*words).text);
   printf("Count is:\t%d\n", (*words).count);
   char b;
-  size_t count1 =0;
-  size_t count2 = 0;
-  char mywords [20][50];
+  int count1 =0;
+  //char theword[50];
   for(int i=0; i<len; i++){
     b = input_text[i];
-    int count3 = 0;
     if (b == ' '){
-      mywords[count1][count2] = '\0';
-      for (int t=0; t<50; t++){
-        (*words).text[count3] = mywords[count1][t];
-        count3 ++;
-        if(mywords[count1][t] == '\0'){
-          (*words).count ++;
-          break;
-        }
-      }
-      count1 ++;
-      count2 =0;
-      continue;
-    }
-    mywords[count1][count2]= b;
-  }
-
-  for (int j=0; j<50; j++){
-    if(mywords[0][j] == '\0'){
+      (*words).count = count1+1;
+      
+      (*words).text[i] = '\0';
       break;
+      }
+    (*words).text[i] = b;
     }
-  printf("%c", mywords[0][j]);
+    printf("The word was:\t");
+    for(int i=0; i<5; i++){
+      printf("%c", (*words).text[i]);
+    }
+    printf("\n");
+    return (*words).count;
   }
-  return 0;
-}
