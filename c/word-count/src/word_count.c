@@ -11,10 +11,15 @@ int word_count(const char *input_text, word_count_word_t * words){
   for(int i=0; i<len; i++){
     b = input_text[i];
     if (b == ' '){
+      mywords[count1][count2] = '\0';
       count1 ++;
       count2 =0;
       continue;
     }
-
   }
+  mywords[count1][count2]= b;
+  for (int j=0; j<50; j++){
+  printf("%c", mywords[0][j]);
+  }
+  return 0;
 }
