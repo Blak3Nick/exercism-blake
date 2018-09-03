@@ -10,8 +10,18 @@ int word_count(const char *input_text, word_count_word_t * words){
   char mywords [20][50];
   for(int i=0; i<len; i++){
     b = input_text[i];
+    int count3 = 0;
     if (b == ' '){
       mywords[count1][count2] = '\0';
+      for (int t=0; t<50; t++){
+
+        (*words).text[count3] = mywords[count1][t];
+        count3 ++;
+        if(mywords[count1][t] == '\0'){
+          (*words).count ++;
+          break;
+        }
+      }
       count1 ++;
       count2 =0;
       continue;
