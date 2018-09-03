@@ -14,7 +14,6 @@ int word_count(const char *input_text, word_count_word_t * words){
     if (b == ' '){
       mywords[count1][count2] = '\0';
       for (int t=0; t<50; t++){
-
         (*words).text[count3] = mywords[count1][t];
         count3 ++;
         if(mywords[count1][t] == '\0'){
@@ -26,8 +25,9 @@ int word_count(const char *input_text, word_count_word_t * words){
       count2 =0;
       continue;
     }
+    mywords[count1][count2]= b;
   }
-  mywords[count1][count2]= b;
+
   for (int j=0; j<50; j++){
   printf("%c", mywords[0][j]);
   }
