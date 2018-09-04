@@ -14,11 +14,15 @@ int word_count(const char *input_text, word_count_word_t * words){
     b = input_text[i];
     if (b == ' '){
       (*words).count = count1+1;
-      
+
       (*words).text[i] = '\0';
       break;
       }
     (*words).text[i] = b;
+    }
+    if(len>0 && count1 <1 ){
+      count1 +=1;
+      (*words).text = input_text;
     }
     printf("The word was:\t");
     for(int i=0; i<5; i++){
