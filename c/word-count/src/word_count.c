@@ -5,7 +5,8 @@
 int word_count(const char *input_text, word_count_word_t * words){
   int len = strlen(input_text);
   printf("%s\n", input_text);
-  printf("Words text are:\t%s\n", (*words).text);
+  printf("Words text are:\t%s\n", (*words).text);  
+  (*words).count =0;
   printf("Count is:\t%d\n", (*words).count);
   char theword[len];
   char b;
@@ -30,9 +31,6 @@ int word_count(const char *input_text, word_count_word_t * words){
 
     }
     printf("The word was:\t");
-    for(int i=0; i<5; i++){
-      printf("%c", (*words).text[i]);
-    }
-    printf("\n");
+    printf("%s\n", (*words).text);
     return (*words).count;
   }
