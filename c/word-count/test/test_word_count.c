@@ -55,7 +55,7 @@ void test_word_count_one_word(void)
 }
 
 void test_word_count_one_of_each_word(void)
-{             // delete this line to run test
+{    TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "one of each";
@@ -82,6 +82,7 @@ void test_word_count_one_of_each_word(void)
 
 void test_word_count_multiple_occurrences_of_a_word(void)
 {
+  TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "one fish two fish red fish blue fish";
@@ -113,6 +114,7 @@ void test_word_count_multiple_occurrences_of_a_word(void)
 
 void test_word_count_handles_cramped_lists(void)
 {
+  TEST_IGNORE();
    int index = 0;
    int actual_word_count;
    char *input_text = "one,two,three";
