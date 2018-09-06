@@ -3,6 +3,7 @@
 #include "word_count.h"
 
 int word_count(const char *input_text, word_count_word_t * words){
+  //words is a pointer to an array of word_count_word_t
   int len = strlen(input_text);
   printf("%s\n", input_text);
   printf("Words text are:\t%s\n", (*words).text);
