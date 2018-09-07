@@ -6,11 +6,14 @@
 
 void tester(word_count_word_t *wordArray){
 
-  word_count_word_t *theword =  wordArray[0];
-  printf("%d\n", (*theword).count);
+  printf("%d\n", wordArray[0].count);
 }
 
-int int main(void) {
+int main(void) {
+  word_count_word_t * tests;
+  tests[0].count = 1;
+  strncpy(tests[0].text, "word", 5);
+  tester(tests);
 
   return 0;
 }
