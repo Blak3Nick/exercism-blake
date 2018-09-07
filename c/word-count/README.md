@@ -19,6 +19,7 @@ the basic information on setting up the development environment expected
 by the exercises.
 
 
+
 ## Passing the Tests
 
 Get the first test compiling, linking and passing by following the [three
