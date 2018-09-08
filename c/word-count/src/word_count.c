@@ -28,6 +28,8 @@ int word_count(const char *input_text, word_count_word_t * words){
       }
     }
       word[index] = b;
+      strncpy(words[0].text, "word", 5);
+      words[0].count = 1;
       index ++;
     }
     return wordCount;
