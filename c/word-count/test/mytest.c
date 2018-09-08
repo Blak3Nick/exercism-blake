@@ -6,7 +6,7 @@
 
 void tester(word_count_word_t *wordArray){
 
-  printf("%d\n", (*wordArray[0]).count);
+  printf("%d\n", (*wordArray).count);
 }
 
 int main(void) {

@@ -5,7 +5,7 @@ r8 =0000000000000000 r9 =0000000000000000 r10=00000000FFFFCA90
 r11=0000000180045F95 r12=0000000000000000 r13=0000000000000000
 r14=0000000000000000 r15=0000000000000000
 rbp=00000000FFFFCC00 rsp=00000000FFFFCBD0
-program=C:\users\Cyr1lfiggus1\Exercism\c\word-count\test\mytest.exe, pid 150280, thread main
+program=C:\users\Cyr1lfiggus1\Exercism\c\word-count\test\mytest.exe, pid 158408, thread main
 cs=0033 ds=002B es=002B fs=0053 gs=002B ss=002B
 Stack trace:
 Frame        Function    Args
