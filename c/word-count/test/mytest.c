@@ -5,7 +5,7 @@
 #include "../src/word_count.h"
 word_count_word_t  tests[1];
 void tester(word_count_word_t *wordArray){
-
+// Access to the array of word structs can be obtained through simple array indexing
   printf("%d\n", wordArray[0].count);
 }
 
