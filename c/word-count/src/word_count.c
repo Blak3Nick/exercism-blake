@@ -16,11 +16,12 @@ int word_count(const char *input_text, word_count_word_t * words){
   //char theword[50];
   for(int i=0; i<len; i++){
     b = input_text[i];
-    if (b == ' '){
-      word[index +1] = '\0';
+    if (b == ' ' || b =='\0'){
+      index ++;
+      word[index] = '\0';
       char * theword = word;
       strncpy(words[indexForWords].text, theword, len);
-      words[indexForWords].count += 1;
+      words[indexForWords].count = 1;
       wordCount ++;
       indexForWords ++;
       index = -1;
