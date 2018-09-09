@@ -19,6 +19,9 @@ int word_count(const char *input_text, word_count_word_t * words){
   //char theword[50];
   for(int i=0; i<len; i++){
     b = input_text[i];
+    if(b == '\n'){
+      continue;
+    }
     if(b != ' ' && b!= ',' ){
     word[index] = b;
     }
