@@ -19,17 +19,16 @@ int word_count(const char *input_text, word_count_word_t * words){
     if (b == ' '){
       word[index +1] = '\0';
       char * theword = word;
-      int size = sizeof(word);
-      strncpy(words[indexForWords].text, theword, size);
+      strncpy(words[indexForWords].text, theword, len);
       words[indexForWords].count += 1;
       wordCount ++;
+      indexForWords ++;
+      index = -1;
       for(int j=0; j<len; j++){
         word[j] = '\0';
       }
     }
       word[index] = b;
-      strncpy(words[0].text, "word", 5);
-      words[0].count = 1;
       index ++;
     }
     return wordCount;
