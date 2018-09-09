@@ -19,10 +19,10 @@ int word_count(const char *input_text, word_count_word_t * words){
   //char theword[50];
   for(int i=0; i<len; i++){
     b = input_text[i];
-    if(b != ' '){
+    if(b != ' ' && b!= ',' ){
     word[index] = b;
     }
-    if (b == ' '){
+    if (b == ' '|| b == ','){
       char * theword = word;
       printf("The word is\t%s\n\n", theword);
       strncpy(words[indexForWords].text, theword, len);
