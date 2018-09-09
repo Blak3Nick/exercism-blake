@@ -24,22 +24,24 @@ int word_count(const char *input_text, word_count_word_t * words){
       continue;
     }
     if(b != ' ' && b!= ',' ){
-      if(isalpha(b)){
+      if(isalpha(b) || isdigit(b) ){
           word[index] = b;
       }
 
     }
     if (b == ' '|| b == ','){
       char * theword = word;
-      printf("The word is\t%s\n\n", theword);
-      strncpy(words[indexForWords].text, theword, len);
-      words[indexForWords].count = 1;
-      wordCount ++;
-      indexForWords ++;
-      index = -1;
-      for(int j=0; j<len; j++){
-        word[j] = '\0';
-      }
+
+        printf("The word is\t%s\n\n", theword);
+        strncpy(words[indexForWords].text, theword, len);
+        words[indexForWords].count = 1;
+        wordCount ++;
+        indexForWords ++;
+        index = -1;
+        for(int j=0; j<len; j++){
+          word[j] = '\0';
+        }   
+
     }
     if ( i == (len-1)){
       char * theword = word;
