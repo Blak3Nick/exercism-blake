@@ -12,6 +12,9 @@ int word_count(const char *input_text, word_count_word_t * words){
   int indexForWords = 0;
   int wordCount = 0;
   char word[len];
+  for(int j=0; j<len; j++){
+    word[j] = '\0';
+  }
   words[indexForWords].count =1;
   //char theword[50];
   for(int i=0; i<len; i++){
