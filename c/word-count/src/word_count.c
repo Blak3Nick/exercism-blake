@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "word_count.h"
 
 int word_count(const char *input_text, word_count_word_t * words){
@@ -23,7 +24,10 @@ int word_count(const char *input_text, word_count_word_t * words){
       continue;
     }
     if(b != ' ' && b!= ',' ){
-    word[index] = b;
+      if(isalpha(b)){
+          word[index] = b;
+      }
+
     }
     if (b == ' '|| b == ','){
       char * theword = word;
