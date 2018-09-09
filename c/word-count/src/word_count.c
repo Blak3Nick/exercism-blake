@@ -10,16 +10,18 @@ int word_count(const char *input_text, word_count_word_t * words){
   char b;
   int index = 0;
   int indexForWords = 0;
-  int wordCount = 1;
+  int wordCount = 0;
   char word[len];
   words[indexForWords].count =1;
   //char theword[50];
   for(int i=0; i<len; i++){
     b = input_text[i];
-    if (b == ' ' || b =='\0'){
-      index ++;
-      word[index] = '\0';
+    if(b != ' '){
+    word[index] = b;
+    }
+    if (b == ' '){
       char * theword = word;
+      printf("The word is\t%s\n\n", theword);
       strncpy(words[indexForWords].text, theword, len);
       words[indexForWords].count = 1;
       wordCount ++;
@@ -29,7 +31,19 @@ int word_count(const char *input_text, word_count_word_t * words){
         word[j] = '\0';
       }
     }
-      word[index] = b;
+    if ( i == (len-1)){
+      char * theword = word;
+      printf("The word is\t%s\n\n", theword);
+      strncpy(words[indexForWords].text, theword, len);
+      words[indexForWords].count = 1;
+      wordCount ++;
+      indexForWords ++;
+      index = -1;
+      for(int j=0; j<len; j++){
+        word[j] = '\0';
+      }
+    }
+
       index ++;
     }
     return wordCount;
