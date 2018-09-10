@@ -10,12 +10,8 @@ char currentWord[50];
 char currentChar;
 char * allTheWords[21];
 
-
 bool isWordComplete(){
   int len = strlen(currentWord);
-  if(len <1){
-    return false;
-  }
   if(currentChar == ' ' || currentChar == ','){
     return true;
   }
