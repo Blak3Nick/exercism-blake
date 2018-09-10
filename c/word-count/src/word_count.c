@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "word_count.h"
+#include <stdbool.h>
 
 int word_count(const char *input_text, word_count_word_t * words){
   //words is a pointer to an array of word_count_word_t need to access via indexing
