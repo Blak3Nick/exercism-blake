@@ -11,10 +11,15 @@ void tester(word_count_word_t *wordArray){
 // Access to the array of word structs can be obtained through simple array indexing
   printf("%d\n", wordArray[0].count);
 }
-
+char currentWord[50];
 bool isTrue(void){
   bool yup = true;
   return yup;
+}
+void clearWord (){
+  for(int j=0; j<50; j++){
+    currentWord[j] = '\0';
+  }
 }
 
 int main(void) {
@@ -33,6 +38,7 @@ int main(void) {
   if(isTrue()){
     printf("It's true\n");
   }
+  clearWord();
 
   return 0;
 }
