@@ -11,7 +11,7 @@ char currentChar;
 char * allTheWords[21];
 
 bool isWordComplete(){
-  int len = strlen(currentWord);
+  //int len = strlen(currentWord);
   if(currentChar == ' ' || currentChar == ','){
     return true;
   }
@@ -37,7 +37,7 @@ int word_count(const char *input_text, word_count_word_t * words){
   char currentChar;
   int index = 0;
   int indexForWords = 0;
-  int wordCount = 1;
+  int wordCount = 0;
   int found;
   allTheWords[0] = NULL;
   clearWord();
