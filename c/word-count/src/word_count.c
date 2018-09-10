@@ -6,14 +6,26 @@
 #include "word_count.h"
 #include <stdbool.h>
 
+
+bool isWordComplete(char currentChar, char * currentWord){
+  int len = strlen(currentWord);
+  if(len <1){
+    return false;
+  }
+  if(currentChar == ' ' || currentChar == ','){
+    return true;
+  }
+  return false;
+}
+
 int word_count(const char *input_text, word_count_word_t * words){
   //words is a pointer to an array of word_count_word_t need to access via indexing
   int len = strlen(input_text);
-  char b;
+  char currentChar;
   int index = 0;
   int indexForWords = 0;
   int wordCount = 0;
-  char word[len];
+  char currentWord[len];
   char * allTheWords[21];
   allTheWords[0] = NULL;
   int found;

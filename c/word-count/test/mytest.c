@@ -18,7 +18,11 @@ bool isTrue(void){
 }
 
 int main(void) {
-
+  char word[] = "hell\0";
+  for(int j=0; j<5; j++){
+    word[j] = '\0';
+  }
+  printf("The length of the word is %d\n\n", strlen(word));
   tests[0].count = 1;
   strncpy(tests[0].text, "word", 5);
   tester(tests);
