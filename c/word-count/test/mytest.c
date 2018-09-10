@@ -14,6 +14,10 @@ int main(void) {
   tests[0].count = 1;
   strncpy(tests[0].text, "word", 5);
   tester(tests);
+  char * words[2];
+  words[0] = "hello";
+  words[1] = "goodbye";
+  printf("%s\t%s\n", words[0], words[1]);
 
   return 0;
 }
