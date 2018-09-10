@@ -13,6 +13,7 @@ int word_count(const char *input_text, word_count_word_t * words){
   int indexForWords = 0;
   int wordCount = 0;
   char word[len];
+  char * allTheWords[20];
   for(int j=0; j<len; j++){
     word[j] = '\0';
   }
@@ -40,7 +41,7 @@ int word_count(const char *input_text, word_count_word_t * words){
         index = -1;
         for(int j=0; j<len; j++){
           word[j] = '\0';
-        }   
+        }
 
     }
     if ( i == (len-1)){
