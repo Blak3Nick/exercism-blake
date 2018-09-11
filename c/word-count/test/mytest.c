@@ -37,7 +37,7 @@ int main(void) {
   printf("%s\t%s\n", words[0], words[1]);
   if(isTrue()){
     printf("It's true\n");
-  }
+  } 
   clearWord();
 
   return 0;
