@@ -13,7 +13,7 @@ char * allTheWords[21];
 bool isWordComplete(){
   //int len = strlen(currentWord);
   if(currentChar == ' ' || currentChar == ','){
-    printf("The word is complete in the method\n" );
+    //printf("The word is complete in the method\n" );
     return true;
   }
   return false;
@@ -24,8 +24,10 @@ void clearWord (){
   }
 }
 bool wordAlreadyCounted(int wordCount) {
+  //printf("The wordCount is\t%d\n", wordCount);
   for (int i=0; i < wordCount; i++){
     int compare = strncmp(currentWord, allTheWords[i], 50);
+    printf("The words being compared are:\t%s\t\t%s\n", currentWord, allTheWords[i]);
       if (compare == 0){
         return true;
       }
@@ -56,9 +58,10 @@ int word_count(const char *input_text, word_count_word_t * words){
     }
     if (isWordComplete()){
         char * theword = currentWord;
-        printf("The word is complete.\n");
+
             if(wordAlreadyCounted(wordCount) ){
               words[indexForWords].count += 1;
+            //  printf("The word already counted.\n");
               found = 1;
             }
 
@@ -96,6 +99,9 @@ int word_count(const char *input_text, word_count_word_t * words){
     }
 
       index ++;
+    }
+    for (int j=0; j< wordCount; j++){
+      printf("The word is:\t%s\n", allTheWords[j]);
     }
     return wordCount;
   }
