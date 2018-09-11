@@ -13,6 +13,7 @@ char * allTheWords[21];
 bool isWordComplete(){
   //int len = strlen(currentWord);
   if(currentChar == ' ' || currentChar == ','){
+    printf("The word is complete in the method\n" );
     return true;
   }
   return false;
@@ -34,7 +35,6 @@ bool wordAlreadyCounted(int wordCount) {
 int word_count(const char *input_text, word_count_word_t * words){
   //words is a pointer to an array of word_count_word_t need to access via indexing
   int len = strlen(input_text);
-  char currentChar;
   int index = 0;
   int indexForWords = 0;
   int wordCount = 0;
@@ -46,7 +46,6 @@ int word_count(const char *input_text, word_count_word_t * words){
   for(int i=0; i<len; i++){
     found = 0;
     currentChar = input_text[i];
-    printf("Currentchar is \t%c\n",currentChar );
     if(currentChar == '\n'){
       continue;
     }
@@ -57,6 +56,7 @@ int word_count(const char *input_text, word_count_word_t * words){
     }
     if (isWordComplete()){
         char * theword = currentWord;
+        printf("The word is complete.\n");
             if(wordAlreadyCounted(wordCount) ){
               words[indexForWords].count += 1;
               found = 1;
