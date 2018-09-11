@@ -46,6 +46,7 @@ int word_count(const char *input_text, word_count_word_t * words){
   for(int i=0; i<len; i++){
     found = 0;
     currentChar = input_text[i];
+    printf("Currentchar is \t%c\n",currentChar );
     if(currentChar == '\n'){
       continue;
     }
