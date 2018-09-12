@@ -49,6 +49,7 @@ int word_count(const char *input_text, word_count_word_t * words){
     found = 0;
     currentChar = input_text[i];
     if(currentChar == '\n'){
+
       continue;
     }
     if(!isWordComplete() ){
